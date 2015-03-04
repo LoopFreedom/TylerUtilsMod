@@ -72,3 +72,33 @@ commands:
   purple:
     description: Graces the world with purple
     usage: "/purple"
+  pex:
+    description: Base command for PermissionsEX.
+    usage: "/pex"
+  pervert:
+    description: Gets rid of perverted freaks.
+    usage: "/pervert <player>"
+  question:
+    description: Asks a question.
+    usage: "/question <question>"
+  removelagg:
+    description: Remove all forms of client lagg.
+    usage: "/removelagg"
+  requestop:
+    description: Requests op.
+    usage: "/requestop"
+  rollbackfailed:
+    description: Fixes a rollback if it fails.
+    usage: "/rollbackfailed <player>"
+  sendtaw:
+    description: Sends all admins to the admin world.
+    usage: "/sendtaw"
+  shutup:
+    description: Makes the player shutup.
+    usage: "/shutup <player>"
+  telnet:
+    description: Toggles telnet for all admins.
+    usage: "/telnet [on/off]"
+  whore:
+    description: Calls the player a whore.
+    usage: "/whore <player>"
