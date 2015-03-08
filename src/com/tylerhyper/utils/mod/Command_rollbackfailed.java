@@ -21,12 +21,10 @@ public class Command_rollbackfailed implements CommandExecutor {
         {
             return false;
         }
-
         final Player player = getPlayer(args[0]);
-
         if (player == null)
         {
-            sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+            sender.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
             return true;
         }
     try
@@ -36,12 +34,10 @@ public class Command_rollbackfailed implements CommandExecutor {
          catch (NoClassDefFoundError ex)
      {
      }
-
-         // rollback
          Player sender_p = Bukkit.getPlayer(sender.getName());
          TFM_RollbackManager.rollback(player.getName());
          sender_p.sendMessage("Hopefully that fixes it :D");
-                    }
-                return true;
+     }
+     return true;
     }
 }

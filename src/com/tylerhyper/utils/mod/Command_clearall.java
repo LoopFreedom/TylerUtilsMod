@@ -17,9 +17,8 @@ public class Command_clearall implements CommandExecutor {
         TFM_Util.adminAction(sender.getName(), "Cleaning all supered IPs of all admins.", true);
             for(Player player : Bukkit.getOnlinePlayers())
                 {
-            Player player2 = (Player) sender;
-            final TFM_Admin admin = TFM_AdminList.getEntry(player2);
-            final String ip = TFM_Util.getIp(player2);
+            final TFM_Admin admin = TFM_AdminList.getEntry(player);
+            final String ip = TFM_Util.getIp(player);
                 int counter = 0;
                 for (int i = 0; i < admin.getIps().size(); i++)
                 {

@@ -1,8 +1,6 @@
 package com.tylerhyper.utils.mod;
 
 import static com.tylerhyper.utils.mod.TylerUtilsMod.server;
-import static java.lang.Math.random;
-import static java.lang.StrictMath.random;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -25,7 +23,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.scheduler.BukkitRunnable;
 
 public class Command_personal implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -37,7 +34,7 @@ public class Command_personal implements CommandExecutor {
         {
             if (!TFM_Util.isHighRank(sender))
             {
-                TFM_Util.playerMsg(sender, TotalFreedomMod.MSG_NO_PERMS, ChatColor.RED);
+                TFM_Util.playerMsg(sender, TylerUtilsMod.MSG_NO_PERMS, ChatColor.RED);
                 return true;
             }
             which = args[0];
@@ -492,38 +489,6 @@ public class Command_personal implements CommandExecutor {
                 {
                     PlayerInventory inv = player.getInventory();
                     inv.addItem(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1));
-                }
-            break;
-            case "lynxlps":
-                TFM_Util.adminAction("Dahlia Hawthorne", "Eliminating all signs of life.", true);
-                for (World world : Bukkit.getWorlds())
-                {
-                    for (Entity entity : world.getEntities())
-                    {
-                        if(entity instanceof LivingEntity && !(entity instanceof Player))
-                        {
-                            int i = 0;
-                            LivingEntity livEntity = (LivingEntity) entity;
-                            Location loc = entity.getLocation();
-                            do
-                            {
-                                world.strikeLightningEffect(loc);
-
-                                i++;
-                            }
-                            while (i <= 2);
-                            livEntity.setHealth(0);
-                        }
-                    }
-                    for (final Player player : server.getOnlinePlayers())
-                    {
-                        for (double percent = 0.0; percent <= 1.0; percent += (1.0 / STEPS))
-                        {
-                            final float pitch = (float) (percent * 2.0);
-
-                                    player.playSound(randomOffset(player.getLocation(), 5.0), Sound.values()[random.nextInt(Sound.values().length)], 100.0f, pitch);
-                        }
-                    }
                 }
             break;
             case "Lehctas":

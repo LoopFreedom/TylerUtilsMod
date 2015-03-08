@@ -20,8 +20,8 @@ public class Command_removelagg implements CommandExecutor {
             server.dispatchCommand(sender, "lagg clear");
             server.dispatchCommand(sender, "lagg unloadchunks");
             server.dispatchCommand(sender, "setl");
-            server.dispatchCommand(sender, "ro 119");
-            server.dispatchCommand(sender, "ro 52");
+            server.dispatchCommand(sender, "ro 119 50");
+            server.dispatchCommand(sender, "ro 52 50");
             server.dispatchCommand(sender, "rd");
             server.dispatchCommand(sender, "opall -c");
             server.dispatchCommand(sender, "mp");

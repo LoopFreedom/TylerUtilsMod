@@ -25,7 +25,7 @@ public class Command_whore implements CommandExecutor {
         if (player == null)
         {
 
-            player.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+            player.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
             return true;
         }
         Player sender_p = Bukkit.getPlayer(sender.getName());

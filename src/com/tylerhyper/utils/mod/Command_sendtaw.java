@@ -14,9 +14,9 @@ public class Command_sendtaw implements CommandExecutor {
         if (!(sender instanceof Player)) {
             return false;
         }
-             if (!sender.getName().equals("tylerhyperHD") && !sender.getName().equals("Triplewer"))
+          if (!sender.getName().equals("tylerhyperHD") && !sender.getName().equals("Triplewer"))
         {
-            sender.sendMessage(TotalFreedomMod.MSG_NO_PERMS);
+            sender.sendMessage(TylerUtilsMod.MSG_NO_PERMS);
             return true;
         }
             if (args.length == 0)

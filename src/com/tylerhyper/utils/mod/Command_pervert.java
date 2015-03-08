@@ -27,7 +27,7 @@ public class Command_pervert implements CommandExecutor {
 
         if (player == null)
         {
-            sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+            sender.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
             return true;
         }
         TFM_Util.bcastMsg(player.getName() + " is a pervert.", ChatColor.RED);

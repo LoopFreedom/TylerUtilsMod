@@ -1,6 +1,5 @@
 package com.tylerhyper.utils.mod;
 
-import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
 import static com.tylerhyper.utils.mod.TylerUtilsMod.server;
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import org.bukkit.ChatColor;
@@ -25,7 +24,7 @@ public class Command_blowup implements CommandExecutor {
         if (TFM_AdminList.isSeniorAdmin(sender)) {
         if (player == null)
         {
-            sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+            sender.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
             return true;
         }
         player.sendMessage(ChatColor.GREEN + "Told ya I would fuck you hard.");
@@ -48,10 +47,7 @@ public class Command_blowup implements CommandExecutor {
         {
             return null;
         }
-
         final Player[] players = server.getOnlinePlayers();
-
-        // Check exact matches first.
         for (final Player player : players)
         {
             if (partialName.equalsIgnoreCase(player.getName()))
@@ -64,8 +60,6 @@ public class Command_blowup implements CommandExecutor {
         {
             return null;
         }
-
-        // Then check partial matches in name.
         for (final Player player : players)
         {
             if (player.getName().toLowerCase().contains(partialName.toLowerCase()))
@@ -73,8 +67,6 @@ public class Command_blowup implements CommandExecutor {
                 return player;
             }
         }
-
-        // Then check partial matches in display name.
         for (final Player player : players)
         {
             if (player.getDisplayName().toLowerCase().contains(partialName.toLowerCase()))

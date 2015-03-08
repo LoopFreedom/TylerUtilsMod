@@ -1,15 +1,12 @@
 package com.tylerhyper.utils.mod;
 
-
 import me.StevenLawson.TotalFreedomMod.TFM_RollbackManager;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
-import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
 import me.StevenLawson.TotalFreedomMod.Bridge.TFM_WorldEditBridge;
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import net.minecraft.util.org.apache.commons.lang3.ArrayUtils;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 import static org.bukkit.Bukkit.getPlayer;
-
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -33,7 +30,7 @@ public class Command_destroy implements CommandExecutor {
 
 	        if (player == null)
 	        {
-                sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+                sender.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
 	            return true;
 	        }
 	        String reason = null;
@@ -43,8 +40,6 @@ public class Command_destroy implements CommandExecutor {
 	        }
 	        sender.sendMessage(ChatColor.RED + "Sending that Mother fucker to hell.");
 	        TFM_Util.bcastMsg(player.getName() + " has been sent to Hell.", ChatColor.RED);
-
-	        // Undo WorldEdits:
 	        try
 	        {
 	            TFM_WorldEditBridge.undo(player, 15);
@@ -52,20 +47,10 @@ public class Command_destroy implements CommandExecutor {
 	        catch (NoClassDefFoundError ex)
 	        {
 	        }
-
-	        // rollback
 	        TFM_RollbackManager.rollback(player.getName());
-
-	        // deop
 	        player.setOp(false);
-
-	        // set gamemode to survival:
 	        player.setGameMode(GameMode.SURVIVAL);
-
-	        // clear inventory:
 	        player.getInventory().clear();
-
-	        // strike with lightning effect:
 	        final Location targetPos = player.getLocation();
 	        for (int x = -1; x <= 1; x++)
 	        {
@@ -75,13 +60,9 @@ public class Command_destroy implements CommandExecutor {
 	                targetPos.getWorld().strikeLightning(strike_pos);
 	            }
 	        }
-	        //kill them.
 	        player.setHealth(0.0);
-               //welcome xD
            player.sendMessage(ChatColor.RED + "Welcome to hell mother fucker");
-               //insult them
 	       player.sendMessage(ChatColor.RED + "You faggot ass bitch go die in a hole");
-	       //send the admin the message
 	       sender.sendMessage(ChatColor.WHITE + "The deed has been done.");
 	}
     return true;

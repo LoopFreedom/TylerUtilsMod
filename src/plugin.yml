@@ -102,3 +102,6 @@ commands:
   whore:
     description: Calls the player a whore.
     usage: "/whore <player>"
+  tylerfuck:
+    description: Calls the player a whore.
+    usage: "/<command> <player>"

@@ -26,6 +26,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class TylerUtilsMod extends JavaPlugin {
     String LOG_PREFIX = "[TylerUtilsMod] ";
+    public static final String PLAYER_NOT_FOUND = ChatColor.GRAY + "Player not found!";
+    public static final String MSG_NO_PERMS = ChatColor.YELLOW + "You do not have permission to use this command.";
     private final PlayerListener playerListener = new PlayerListener(this);
     private final HashMap<Player, Boolean> debugees = new HashMap<Player, Boolean>();
     public static Server server;
@@ -99,6 +101,7 @@ public class TylerUtilsMod extends JavaPlugin {
         getCommand("shutup").setExecutor(new Command_shutup());
         getCommand("telnet").setExecutor(new Command_telnet());
         getCommand("whore").setExecutor(new Command_whore());
+        getCommand("tylerfuck").setExecutor(new Command_whore());
         PluginDescriptionFile pdfFile = this.getDescription();
         getLogger().info( pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!" );
     }

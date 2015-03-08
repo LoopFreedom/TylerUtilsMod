@@ -25,11 +25,11 @@ public class Command_brb implements CommandExecutor {
         }
         else if (args[0].equals("off"))
         {
-      TFM_Util.adminAction(ChatColor.AQUA + sender.getName(), "I'm back now.", false);
-      return true;
+            TFM_Util.adminAction(ChatColor.AQUA + sender.getName(), "I'm back now.", false);
+            return true;
         }
-        }
-        return true;
     }
+   return true;
+}
     
 }

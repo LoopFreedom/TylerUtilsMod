@@ -26,7 +26,7 @@ public class Command_shutup implements CommandExecutor {
 
 	        if (player == null)
 	        {
-	            player.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+	            player.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
 	            return true;
 	        }
 	        player.sendMessage(ChatColor.RED + "Now shut the fuck up will ya?");

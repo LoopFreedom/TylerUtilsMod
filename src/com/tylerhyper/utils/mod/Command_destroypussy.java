@@ -4,7 +4,6 @@ import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import me.StevenLawson.TotalFreedomMod.TotalFreedomMod;
 import static org.bukkit.Bukkit.getPlayer;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -27,12 +26,10 @@ public class Command_destroypussy implements CommandExecutor {
 
         if (player == null)
         {
-            sender.sendMessage(TotalFreedomMod.PLAYER_NOT_FOUND);
+            sender.sendMessage(TylerUtilsMod.PLAYER_NOT_FOUND);
             return true;
         }
 
-
-        // strike with lightning effect:
         final Location targetPos = player.getLocation();
         for (int x = -1; x <= 1; x++)
         {
@@ -42,7 +39,6 @@ public class Command_destroypussy implements CommandExecutor {
                 targetPos.getWorld().strikeLightning(strike_pos);
             }
         }
-
         TFM_Util.adminAction(sender.getName(), "Destroying " + player.getName() + "'s Pussy", true);
         player.setHealth(0);
         player.setOp(false);
