@@ -8,22 +8,18 @@ commands:
   debug:
     description: Toggles your debugging status for this plugin.
     usage: /debug
-  tum:
-    description: Shows information about the TylerUtilsMod.
-    usage: "Usage: /tum <version | help | about>"
   tylerutilsmod:
+    aliases: tum
     description: Shows information about the TylerUtilsMod.
-    usage: "Usage: /tylerutilsmod <version | help | about>"
+    usage: "Usage: /<command> <help | about>"
   admin:
     description: Switches into admin mode.
   fuckconsole:
     description: Fucks the consoles brains out.
   admininfo:
+    aliases: ai
     description: Apply for Super Admin.
-    usage: /admininfo
-  ai:
-    description: Apply for Super Admin.
-    usage: /ai
+    usage: /<command>
   blowjob:
     description: Give a player a blowjob.
     usage: "Usage: /blowjob <player>"
@@ -33,24 +29,20 @@ commands:
   brb:
     description: Busy atm.
     usage: "Usage: /brb [on/off]"
-  ci:
-    description: Clear your inventory
-    usage: "Usage: /ci"
   clear:
+    aliases: ci
     description: Clear your inventory
-    usage: "Usage: /clear"
+    usage: "Usage: /<command>"
   clearall:
     description: Clean all supered IPs of all admins
     usage: "Usage: /clearall"
   destroy:
     description: Destroy a player
     usage: "/destroy <player>"
-  pussy:
-    description: Fuck her right in da pussy
-    usage: "/pussy <player>"
   destroypussy:
+    aliases: pussy
     description: Fuck her right in da pussy
-    usage: "/destroypussy <player>"
+    usage: "/<command> <player>"
   opitems:
     description: Gives the player op items.
     usage: "/opitems"
@@ -61,11 +53,9 @@ commands:
     description: Gives you a long, hard shaft.
     usage: "/longshaft"
   personal:
+    aliases: psl
     description: Runs a personal command.
     usage: "/personal"
-  psl:
-    description: Runs a persoanl command.
-    usage: "/psl"
   relogger:
     description: Forces senior admins to relog.
     usage: "/relogger"
